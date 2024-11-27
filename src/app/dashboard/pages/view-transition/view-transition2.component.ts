@@ -3,9 +3,8 @@ import { Component } from '@angular/core';
 import { TitleComponent } from '@shared/title/title.component';
 
 @Component({
-  standalone: true,
-  imports: [CommonModule, TitleComponent],
-  template: `
+    imports: [CommonModule, TitleComponent],
+    template: `
     <app-title title="View Transition"></app-title>
     <section class="flex justify-end">
       <img
@@ -21,6 +20,6 @@ import { TitleComponent } from '@shared/title/title.component';
       ></div>
     </section>
   `,
-  styles: ``,
+    styles: ``
 })
 export default class ViewTransitionComponent {}

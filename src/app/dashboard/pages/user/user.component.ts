@@ -7,9 +7,8 @@ import { switchMap } from 'rxjs';
 import { Service } from '../../../services/.service';
 
 @Component({
-  standalone: true,
-  imports: [CommonModule, TitleComponent],
-  template: `<app-title [title]="titleLabel()"></app-title>
+    imports: [CommonModule, TitleComponent],
+    template: `<app-title [title]="titleLabel()"></app-title>
     @if (user()) {
     <section>
       <img [srcset]="user()!.avatar" alt="" />
@@ -18,7 +17,7 @@ import { Service } from '../../../services/.service';
     }@else {
     <p>Cargando la infrmacion</p>
     } `,
-  styles: ``,
+    styles: ``
 })
 export default class UserComponent {
   private route = inject(ActivatedRoute);

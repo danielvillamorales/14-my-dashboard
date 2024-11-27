@@ -8,13 +8,12 @@ import {
 import { TitleComponent } from '@shared/title/title.component';
 
 @Component({
-  standalone: true,
-  imports: [CommonModule, TitleComponent],
-  changeDetection: ChangeDetectionStrategy.OnPush,
-  template: `<app-title [title]="currentFramework()"></app-title>
+    imports: [CommonModule, TitleComponent],
+    changeDetection: ChangeDetectionStrategy.OnPush,
+    template: `<app-title [title]="currentFramework()"></app-title>
     <pre>{{ frameworkasSignal() | json }}</pre>
     <pre>{{ frameworkasProperty | json }}</pre> `,
-  styles: ``,
+    styles: ``
 })
 export default class ChangeDetectionComponent {
   currentFramework = computed(
